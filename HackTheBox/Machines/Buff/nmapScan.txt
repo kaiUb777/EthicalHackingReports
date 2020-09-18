@@ -1,6 +1,6 @@
-# Nmap 7.80 scan initiated Fri Sep 18 09:43:48 2020 as: nmap -sV -O --script=//opt/recon/nmap-vulners -oN nmapScan.txt 10.10.10.198
+# Nmap 7.80 scan initiated Fri Sep 18 17:00:59 2020 as: nmap -sS -sV -O --script=//opt/recon/scripts/nmap-vulners -oN nmapScan.txt 10.10.10.198
 Nmap scan report for 10.10.10.198
-Host is up (0.24s latency).
+Host is up (0.14s latency).
 Not shown: 999 filtered ports
 PORT     STATE SERVICE VERSION
 8080/tcp open  http    Apache httpd 2.4.43 ((Win64) OpenSSL/1.1.1g PHP/7.4.6)
@@ -13,11 +13,8 @@ PORT     STATE SERVICE VERSION
 |     	CVE-2020-9490	5.0	https://vulners.com/cve/CVE-2020-9490
 |_    	CVE-2020-11993	4.3	https://vulners.com/cve/CVE-2020-11993
 Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
-Device type: general purpose
-Running (JUST GUESSING): Microsoft Windows XP|7 (86%)
-OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_7
-Aggressive OS guesses: Microsoft Windows XP SP2 (86%), Microsoft Windows 7 (85%)
-No exact OS matches for host (test conditions non-ideal).
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Sep 18 09:44:33 2020 -- 1 IP address (1 host up) scanned in 44.98 seconds
+# Nmap done at Fri Sep 18 17:01:33 2020 -- 1 IP address (1 host up) scanned in 34.52 seconds
