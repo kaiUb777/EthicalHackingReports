@@ -1,0 +1,62 @@
+/* Function Stack Size: 0x10 bytes */
+
+void viewDidLoad(long param_1,undefined8 param_2)
+
+{
+  undefined8 uVar1;
+  long lVar2;
+  undefined8 uVar3;
+  undefined8 uVar4;
+  undefined8 uVar5;
+  undefined8 uVar6;
+  undefined8 uVar7;
+  undefined8 uVar8;
+  ID IVar9;
+  undefined8 uVar10;
+  undefined8 uVar11;
+  undefined auVar12 [16];
+  undefined auVar13 [16];
+  undefined auVar14 [16];
+  long local_28;
+  class_t *local_20;
+  undefined8 local_18;
+  long local_10;
+  
+  local_20 = &ViewController;
+  local_28 = param_1;
+  local_18 = param_2;
+  local_10 = param_1;
+  viewDidLoad((long)&local_28,"viewDidLoad");
+  uVar1 = *(undefined8 *)(local_10 + l);
+  auVar12 = _objc_msgSend(&_OBJC_CLASS_$_NSString,"alloc");
+  lVar2 = local_10;
+  auVar13 = _objc_msgSend(&_OBJC_CLASS_$_NSData,"alloc",SUB168(auVar12 >> 0x40,0),"alloc");
+  auVar14 = _objc_msgSend(&_OBJC_CLASS_$_NSArray,"alloc",SUB168(auVar13 >> 0x40,0),
+                          &_OBJC_CLASS_$_NSArray);
+  uVar3 = _objc_msgSend(&_OBJC_CLASS_$_NSBundle,"mainBundle",SUB168(auVar14 >> 0x40,0),
+                        &_OBJC_CLASS_$_NSBundle);
+  uVar3 = _objc_retainAutoreleasedReturnValue(uVar3);
+  uVar4 = _objc_msgSend(uVar3,"pathForResource:ofType:",&cf_challenge,&cf_plist);
+  uVar4 = _objc_retainAutoreleasedReturnValue(uVar4);
+  uVar5 = _objc_msgSend(SUB168(auVar14,0),"initWithContentsOfFile:",uVar4,SUB168(auVar14,0));
+  uVar6 = _objc_msgSend(uVar5,"objectAtIndex:",0,uVar5);
+  uVar6 = _objc_retainAutoreleasedReturnValue(uVar6);
+  uVar7 = _objc_msgSend(uVar6,"objectForKey:",&cf_flag,&cf_flag);
+  uVar7 = _objc_retainAutoreleasedReturnValue(uVar7);
+  uVar8 = _objc_msgSend(SUB168(auVar13,0),"initWithBase64EncodedString:options:",uVar7,0);
+  IVar9 = SecretManager:key:iv:data:
+                    (lVar2,"SecretManager:key:iv:data:",1,&cf_!A%D*G-KaPdSgVkY,&cf_QfTjWnZq4t7w!z%C)
+  ;
+  uVar10 = _objc_retainAutoreleasedReturnValue(IVar9);
+  uVar11 = _objc_msgSend(SUB168(auVar12,0),"initWithData:encoding:",uVar10,4);
+  _objc_msgSend(uVar1,"setText:",uVar11,uVar1);
+  _objc_release(uVar11);
+  _objc_release(uVar10);
+  _objc_release(uVar8);
+  _objc_release(uVar7);
+  _objc_release(uVar6);
+  _objc_release(uVar5);
+  _objc_release(uVar4);
+  _objc_release(uVar3);
+  return;
+}
