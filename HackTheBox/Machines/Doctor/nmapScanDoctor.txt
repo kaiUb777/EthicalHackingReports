@@ -1,0 +1,23 @@
+# Nmap 7.80 scan initiated Wed Sep 30 06:11:42 2020 as: nmap -A --script=//opt/recon/scripts -oN //home/kali/Documents/github/EthicalHackingReports/HackTheBox/Machines/Doctor/nmapScanDoctor.txt 10.10.10.209
+Nmap scan report for 10.10.10.209
+Host is up (0.22s latency).
+Not shown: 997 filtered ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http     Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+8089/tcp open  ssl/http Splunkd httpd
+|_http-server-header: Splunkd
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 2.6.32 (91%), Crestron XPanel control system (90%), ASUS RT-N56U WAP (Linux 3.4) (87%), Linux 3.1 (87%), Linux 3.16 (87%), Linux 3.2 (87%), HP P2000 G3 NAS device (87%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (87%), Linux 2.6.32 - 3.1 (86%), Linux 2.6.39 - 3.2 (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   230.15 ms 10.10.16.1
+2   230.20 ms 10.10.10.209
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 30 06:12:48 2020 -- 1 IP address (1 host up) scanned in 66.45 seconds
